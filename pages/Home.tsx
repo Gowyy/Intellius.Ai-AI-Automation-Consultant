@@ -2,7 +2,7 @@ import React, { useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Button } from '../components/UI/Button';
-import { ArrowRight, Bot, Zap, Shield, ChevronRight, Star, ChevronLeft, ArrowDown, ArrowUp, Eye, FileCheck, RefreshCw } from 'lucide-react';
+import { ArrowRight, Bot, Zap, Shield, ChevronRight, Star, ChevronLeft, ArrowDown, ArrowUp, Eye, FileCheck, RefreshCw, PieChart, TrendingUp, BarChart3 } from 'lucide-react';
 import { AGENTS, TESTIMONIALS, AWARDS } from '../constants';
 
 const FEATURES_LIST = [
@@ -257,6 +257,181 @@ export const Home: React.FC = () => {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* ANALYTICS & DASHBOARD SECTION (NEW) */}
+      <section className="py-24 bg-zinc-50 overflow-hidden relative border-t border-zinc-100">
+         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            {/* Header with Pie Icon */}
+            <div className="flex flex-col items-center justify-center mb-16 relative">
+               {/* Decorative curved arrow */}
+               <div className="absolute top-0 right-1/2 translate-x-[200px] -translate-y-8 hidden lg:block opacity-30">
+                  <svg width="120" height="60" viewBox="0 0 120 60" fill="none">
+                     <path d="M10 50 Q 60 10 110 40" stroke="currentColor" strokeWidth="3" strokeDasharray="6 4" className="text-orange-400" />
+                     <path d="M105 35 L 110 40 L 102 43" stroke="currentColor" strokeWidth="3" className="text-orange-400" />
+                  </svg>
+               </div>
+
+               <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-orange-100 rounded-lg text-orange-500 transform -rotate-6 shadow-sm">
+                     <PieChart size={28} />
+                  </div>
+                  <h2 className="text-4xl md:text-5xl font-bold text-zinc-900 tracking-tight">
+                    Turn reporting data into <span className="text-zinc-900 relative">
+                      money
+                      <span className="absolute bottom-1 left-0 w-full h-3 bg-orange-200/50 -z-10 rounded-sm"></span>
+                    </span>
+                  </h2>
+               </div>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+               {/* Left Content */}
+               <div className="order-2 lg:order-1">
+                  <h3 className="text-2xl font-bold text-zinc-900 mb-6 leading-tight">
+                    Smart decisions are based on accurate and real-time data.
+                  </h3>
+                  <p className="text-lg text-zinc-600 mb-8 leading-relaxed">
+                    Dig deeper into your sales metrics with revenue forecasts, team performance analysis, and custom dashboards. Transform raw numbers into actionable insights that drive profitability.
+                  </p>
+                  
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                       <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 flex-shrink-0 mt-1">
+                          <BarChart3 size={20} />
+                       </div>
+                       <div>
+                          <h4 className="font-bold text-zinc-900">Revenue Forecasts</h4>
+                          <p className="text-sm text-zinc-500 mt-1">Predict future earnings with AI-driven trend analysis.</p>
+                       </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                       <div className="w-10 h-10 rounded-full bg-orange-50 flex items-center justify-center text-orange-500 flex-shrink-0 mt-1">
+                          <TrendingUp size={20} />
+                       </div>
+                       <div>
+                          <h4 className="font-bold text-zinc-900">Performance Analysis</h4>
+                          <p className="text-sm text-zinc-500 mt-1">Track team efficiency and identify growth opportunities instantly.</p>
+                       </div>
+                    </div>
+                  </div>
+               </div>
+
+               {/* Right Content: Chart Simulation */}
+               <div className="order-1 lg:order-2">
+                  <motion.div 
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    className="bg-white rounded-2xl shadow-2xl shadow-zinc-200 border border-zinc-100 p-6 md:p-8 relative"
+                  >
+                     {/* Dashboard Header UI */}
+                     <div className="flex items-center justify-between mb-8 pb-4 border-b border-zinc-50">
+                        <div className="flex gap-2">
+                           <span className="px-3 py-1.5 bg-brand-900 text-white rounded-md text-xs font-semibold shadow-sm">Measures ▼</span>
+                           <span className="px-3 py-1.5 bg-zinc-100 text-zinc-600 rounded-md text-xs font-medium">Insert in Spreadsheet</span>
+                        </div>
+                        <div className="flex gap-1">
+                           <div className="w-8 h-8 bg-zinc-50 rounded flex items-center justify-center text-zinc-400 border border-zinc-100"><BarChart3 size={14} /></div>
+                           <div className="w-8 h-8 bg-zinc-50 rounded flex items-center justify-center text-zinc-400 border border-zinc-100"><TrendingUp size={14} /></div>
+                        </div>
+                     </div>
+
+                     {/* The Chart */}
+                     <div className="h-64 w-full relative pl-8 pb-6">
+                        {/* Grid Lines */}
+                        <div className="absolute inset-0 flex flex-col justify-between pl-8 pb-6 pointer-events-none">
+                           {[14, 12, 10, 8, 6, 4, 2, 0].map((val) => (
+                              <div key={val} className="w-full border-t border-zinc-100 relative">
+                                 <span className="absolute -left-8 -top-2 text-[10px] text-zinc-400 w-6 text-right">{val}</span>
+                              </div>
+                           ))}
+                        </div>
+
+                        {/* Bars Container */}
+                        <div className="absolute inset-0 pl-8 pb-6 flex items-end justify-between px-4 gap-4">
+                           {/* Bar 1 */}
+                           <div className="w-full h-full flex items-end relative group">
+                              <div className="w-full flex flex-col gap-0.5 relative z-10 transition-transform group-hover:-translate-y-1 duration-300">
+                                 <div className="h-32 bg-orange-500 rounded-t-sm w-full relative">
+                                    <div className="absolute -top-1.5 -left-1.5 w-3 h-3 bg-zinc-500 rounded-full border-2 border-white z-20"></div>
+                                 </div>
+                                 <div className="h-20 bg-brand-600 w-full rounded-b-sm"></div>
+                              </div>
+                              <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-zinc-500 font-medium">New</span>
+                           </div>
+
+                           {/* Bar 2 */}
+                           <div className="w-full h-full flex items-end relative group">
+                              <div className="w-full flex flex-col gap-0.5 relative z-10 transition-transform group-hover:-translate-y-1 duration-300">
+                                 <div className="h-12 bg-orange-200 w-full rounded-t-sm relative"></div>
+                                 <div className="h-6 bg-brand-200 w-full"></div>
+                                 <div className="h-10 bg-orange-500 w-full"></div>
+                                 <div className="h-24 bg-brand-600 w-full rounded-b-sm"></div>
+                              </div>
+                              <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-zinc-500 font-medium">Qualified</span>
+                           </div>
+
+                           {/* Bar 3 */}
+                           <div className="w-full h-full flex items-end relative group">
+                              <div className="w-full flex flex-col gap-0.5 relative z-10 transition-transform group-hover:-translate-y-1 duration-300">
+                                 <div className="h-16 bg-orange-500 w-full rounded-t-sm relative">
+                                     <div className="absolute -top-1.5 right-0 w-3 h-3 bg-zinc-500 rounded-full border-2 border-white z-20"></div>
+                                 </div>
+                                 <div className="h-16 bg-brand-600 w-full rounded-b-sm"></div>
+                              </div>
+                              <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-zinc-500 font-medium">Proposition</span>
+                           </div>
+
+                           {/* Bar 4 */}
+                           <div className="w-full h-full flex items-end relative group">
+                              <div className="w-full flex flex-col gap-0.5 relative z-10 transition-transform group-hover:-translate-y-1 duration-300">
+                                 <div className="h-6 bg-orange-200 w-full rounded-t-sm relative"></div>
+                                 <div className="h-12 bg-brand-200 w-full rounded-b-sm"></div>
+                              </div>
+                              <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-zinc-500 font-medium">Won</span>
+                           </div>
+
+                           {/* Bar 5 */}
+                           <div className="w-full h-full flex items-end relative group">
+                              <div className="w-full flex flex-col gap-0.5 relative z-10 transition-transform group-hover:-translate-y-1 duration-300">
+                                 <div className="h-20 bg-orange-500 w-full rounded-t-sm relative">
+                                    <div className="absolute -top-1.5 right-1/2 w-3 h-3 bg-zinc-500 rounded-full border-2 border-white z-20"></div>
+                                 </div>
+                              </div>
+                              <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 text-[10px] text-zinc-500 font-medium">Pre-Q</span>
+                           </div>
+                        </div>
+
+                        {/* Trend Line Overlay (SVG) */}
+                        <svg className="absolute inset-0 w-full h-full pointer-events-none pl-8 pb-6" style={{ overflow: 'visible' }}>
+                           <path 
+                             d="M 30 70 L 140 120 L 220 180 L 300 180" 
+                             fill="none" 
+                             stroke="#71717a" 
+                             strokeWidth="2" 
+                             strokeDasharray="4 4" 
+                             className="opacity-50"
+                           />
+                           {/* Connecting dots already in bars */}
+                        </svg>
+
+                        {/* Legend */}
+                        <div className="absolute top-2 right-4 flex gap-3">
+                           <div className="flex items-center gap-1">
+                              <div className="w-2 h-2 bg-brand-600 rounded-sm"></div>
+                              <span className="text-[10px] text-zinc-500">November 2023</span>
+                           </div>
+                           <div className="flex items-center gap-1">
+                              <div className="w-2 h-2 bg-orange-500 rounded-sm"></div>
+                              <span className="text-[10px] text-zinc-500">December 2023</span>
+                           </div>
+                        </div>
+                     </div>
+                  </motion.div>
+               </div>
+            </div>
+         </div>
       </section>
 
       {/* AUTOMATION PLAYGROUND SECTION (Background updated to match image) */}

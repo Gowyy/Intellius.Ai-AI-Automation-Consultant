@@ -122,40 +122,52 @@ export const COMPANY_MENU = [
 
 export const AGENTS = [
   {
-    title: "Financial AI Agent",
-    description: "AI that answers finance ops in seconds – checks invoice status, collects payment intents, guides approvals, and explains forecast/variance with RAG playbooks.",
-    tags: ["↓ manual workload by ~60%", "↑ on-time collections", "↑ forecast accuracy"],
-    image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800" // 3D crypto abstract
+    title: "AI Lead Generation",
+    description: "Autonomous agents that scrape, enrich, and qualify prospects from multiple sources to fill your pipeline with high-intent leads 24/7.",
+    tags: ["↑ leads by 300%", "↓ CAC by 40%", "Auto-outreach"],
+    image: "https://images.unsplash.com/photo-1639322537228-f710d846310a?auto=format&fit=crop&q=80&w=800" // Abstract 3D Network
   },
   {
-    title: "Sales AI Agent",
-    description: "Voice and chat agents that respond in seconds, qualify leads (BANT/MEDDICC), book meetings, write recaps, and update CRM with RAG-powered playbooks.",
-    tags: ["↓ 90% speed-to-lead", "↑ 20-35% meeting rate", "↑ 35-55% CRM hygiene"],
-    image: "https://images.unsplash.com/photo-1633526543814-9718c8922b7a?auto=format&fit=crop&q=80&w=800" // 3D abstract shapes
+    title: "AI Lead Nurturing",
+    description: "Intelligent drip campaigns that deliver hyper-personalized content sequences based on prospect behavior, warming up leads until they're ready to convert.",
+    tags: ["Personalized content", "Behavioral Scoring", "↑ retention"],
+    image: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&q=80&w=800" // Abstract Fluid Blue
   },
   {
-    title: "Medical Voice AI Assistant",
-    description: "HIPAA-ready voice agents for patient scheduling, triage, FAQs, consent collection, and automated note drafting with EHR/telephony integration.",
-    tags: ["↓ no-shows", "↑ scheduling efficiency", "↑ clinician time freed"],
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800" // Abstract molecular/bio
+    title: "AI Voice Assistant",
+    description: "Human-parity voice AI that handles inbound customer service calls, books appointments, and routes complex queries with zero latency.",
+    tags: ["< 500ms latency", "Natural NLP", "24/7 Availability"],
+    image: "https://images.unsplash.com/photo-1614064641938-3bcee529cfc4?auto=format&fit=crop&q=80&w=800" // Abstract Sound Waves
   },
   {
-    title: "Legal Voice AI Assistant",
-    description: "Confidential, compliant voice assistants for deposition capture, live transcripts, exhibit management, and certified records—using RAG-boosted legal terminology and jurisdiction guardrails.",
-    tags: ["rough in <2 hrs", "certified in 24-48 hrs", "↓ 20-40% cost per proceeding"],
-    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?auto=format&fit=crop&q=80&w=800" // Abstract geometry/structure
+    title: "AI Appointment Manager",
+    description: "Seamlessly integrates with your calendar to propose times, handle rescheduling, and send reminders via SMS or Email, eliminating scheduling friction.",
+    tags: ["Calendar Sync", "No-show Reduction", "Auto-Reminders"],
+    image: "https://images.unsplash.com/photo-1633526543814-9718c8922b7a?auto=format&fit=crop&q=80&w=800" // Abstract Blocks/Structure
   },
   {
-    title: "AI Voice Assistants for HR",
-    description: "Agentic voice assistants that handle candidate calls, conduct pre-screening with your scorecards, schedule interviews, and summarize conversations.",
-    tags: ["↓ admin load", "↑ hiring speed", "↑ candidate experience"],
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800" // Abstract mesh/network
+    title: "AI Sales Agent",
+    description: "A tireless sales rep that engages web visitors, answers product questions, handles objections, and guides users to checkout or demo booking.",
+    tags: ["Objection Handling", "Pipeline velocity", "Revenue focus"],
+    image: "https://images.unsplash.com/photo-1642132652859-3ef5a9290aa8?auto=format&fit=crop&q=80&w=800" // Abstract Gold/Upward
   },
   {
-    title: "Security Tech (AI Voice Incident Agent)",
-    description: "Agentic voice assistants that verify alarms, triage incidents, dispatch via SOPs, and generate audit-ready reports—so operators handle threats, not toggles.",
-    tags: ["↓ false dispatches", "↓ time-to-dispatch", "↑ operator capacity"],
-    image: "https://images.unsplash.com/photo-1614064641938-3bcee529cfc4?auto=format&fit=crop&q=80&w=800" // Abstract shield/security
+    title: "AI Customer Support",
+    description: "Resolve 80% of support tickets instantly with generative AI that understands context, history, and brand tone—escalating only when necessary.",
+    tags: ["Ticket Deflection", "Multi-lingual", "CSAT Boost"],
+    image: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800" // Abstract Tech/Cyber
+  },
+  {
+    title: "AI CRM Automation",
+    description: "Keep your CRM spotless. AI monitors communications and automatically updates deal stages, contact details, and notes without manual entry.",
+    tags: ["Data Hygiene", "Auto-Logging", "Pipeline Visibility"],
+    image: "https://images.unsplash.com/photo-1558494949-ef526b0042a0?auto=format&fit=crop&q=80&w=800" // Abstract Server/Data
+  },
+  {
+    title: "AI Finance Agent",
+    description: "Automate invoice processing, expense categorization, and financial reporting. Detect anomalies and generate forecasts with precision.",
+    tags: ["AP/AR Automation", "Expense Tracking", "Financial Forecasting"],
+    image: "https://images.unsplash.com/photo-1628348068343-c6a848d2b6dd?auto=format&fit=crop&q=80&w=800" // Abstract Coin/Shape
   }
 ];
 
